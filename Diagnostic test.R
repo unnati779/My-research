@@ -30,3 +30,8 @@ hausman_test <- phtest(fe_model, re_model)
 print(hausman_test)
 lm_test <- plmtest(re_model, type = "bp")  # Breusch-Pagan LM test
 print(lm_test)
+
+#Cross-sectional dependence
+# Pesaran CD test for cross-sectional dependence
+pcd_test <- pcdtest(re_model, test = "cd")
+print(pcd_test)
